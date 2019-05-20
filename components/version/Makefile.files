@@ -1,0 +1,17 @@
+SOURCE_FILES := \
+    $(COMPONENT_PATH)/version.c 
+
+INCLUDE_DIRS := \
+    $(addprefix $(IDF_PATH)/components/, \
+	    esp32/include \
+        log/include \
+	    soc/esp32/include \
+	) \
+    $(addprefix $(BUILD_DIR_BASE)/, \
+        include \
+	) \
+    $(COMPONENT_PATH)
+
+INCLUDE_PRIVATE_DIRS := \
+    $(BUILD_DIR) 
+
